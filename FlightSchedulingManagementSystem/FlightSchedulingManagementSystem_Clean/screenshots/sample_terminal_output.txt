@@ -1,0 +1,50 @@
+PS C:\FlightSchedulingConsoleProject> java -cp out com.flight.flights.Main
+
+--------------- MAIN MENU ----------------
+1. View All Flights
+2. Add New Flight
+3. Search Flights by Route
+4. Search Flight by Number
+5. Update Flight Status
+6. Cancel Flight
+7. Flight Statistics
+8. Show Live Clock
+9. Save and Exit
+------------------------------------------
+Enter your choice: 1
+
+------------------------------------------------------------------------------------------------
+Flight     Airline         From            To              Date         Departure  Status
+------------------------------------------------------------------------------------------------
+AI101      Air India       Mumbai          Delhi           2026-10-01   08:30      Scheduled
+6E202      IndiGo          Delhi           Bengaluru       2026-10-01   11:15      Scheduled
+UK303      Vistara         Pune            Hyderabad       2026-10-02   16:20      Delayed
+SG404      SpiceJet        Chennai         Kolkata         2026-10-03   19:10      Scheduled
+------------------------------------------------------------------------------------------------
+
+Press ENTER to continue...
+
+========== FLIGHT STATISTICS ==========
+Total Flights : 4
+Scheduled     : 3
+Delayed       : 1
+Cancelled     : 0
+=======================================
+
+Starting clock thread for 5 seconds...
+Live System Time: 14:19:40
+Live System Time: 14:19:41
+Live System Time: 14:19:42
+Live System Time: 14:19:43
+Live System Time: 14:19:44
+Clock thread stopped.
+
+Search example:
+Enter source city: Mumbai
+Enter destination city: Delhi
+
+------------------------------------------------------------------------------------------------
+Flight     Airline         From            To              Date         Departure  Status
+------------------------------------------------------------------------------------------------
+AI101      Air India       Mumbai          Delhi           2026-10-01   08:30      Scheduled
+------------------------------------------------------------------------------------------------
