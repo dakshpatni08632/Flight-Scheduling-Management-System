@@ -1,10 +1,10 @@
-Flight Scheduling Management System
+# Flight Scheduling Management System
 
 Flight Scheduling Management System is a console-based Java application developed to manage basic flight scheduling activities. The application runs completely in the VS Code terminal and uses Core Java concepts such as OOP, collections, exception handling, file handling, streams, and multithreading.
 
 The project is designed as a simple and practical Java mini-project that is easy to understand, run, and explain during a B.Tech practical or viva.
 
-WHAT THE PROJECT DOES
+## What the Project Does
 
 The system provides a menu-driven interface for managing flight information. Users can:
 
@@ -18,19 +18,30 @@ The system provides a menu-driven interface for managing flight information. Use
 - Display a live clock
 - Save and load flight data using a CSV file
 
-PROJECT STRUCTURE
+## Project Structure
 
+```text
 Flight Scheduling Management System
 
 ├── src/
-│   └── com/flight/flights/
-│       ├── Main.java
-│       ├── model/
-│       ├── service/
-│       ├── exception/
-│       ├── util/
-│       ├── thread/
-│       └── dao/
+│   └── com/
+│       └── flight/
+│           └── flights/
+│               ├── Main.java
+│               ├── model/
+│               │   ├── Flight.java
+│               │   ├── InternationalFlight.java
+│               │   └── User.java
+│               ├── service/
+│               │   └── FlightService.java
+│               ├── exception/
+│               │   └── FlightValidationException.java
+│               ├── util/
+│               │   └── FlightFileManager.java
+│               ├── thread/
+│               │   └── ClockThread.java
+│               └── dao/
+│                   └── JdbcFlightDAO.java
 │
 ├── data/
 │   └── flights.csv
@@ -38,31 +49,32 @@ Flight Scheduling Management System
 ├── screenshots/
 ├── run.bat
 └── README.md
+```
 
-MAIN CLASSES
+## Main Classes
 
-Main.java
+**Main.java**  
 Handles the main menu and takes input from the user through the terminal.
 
-Flight.java
+**Flight.java**  
 Stores important flight details such as flight number, airline, source, destination, date, time, and status.
 
-FlightService.java
+**FlightService.java**  
 Contains the main operations such as adding, searching, updating, cancelling, and calculating flight statistics.
 
-InternationalFlight.java
+**InternationalFlight.java**  
 Extends the Flight class and demonstrates inheritance and method overriding.
 
-FlightFileManager.java
+**FlightFileManager.java**  
 Handles reading and writing flight information to the CSV file.
 
-ClockThread.java
+**ClockThread.java**  
 Displays the current time using Java multithreading.
 
-FlightValidationException.java
+**FlightValidationException.java**  
 Handles invalid flight information using a custom exception.
 
-TECHNOLOGIES AND CONCEPTS USED
+## Technologies and Concepts Used
 
 - Java
 - Object-Oriented Programming
@@ -77,25 +89,33 @@ TECHNOLOGIES AND CONCEPTS USED
 - Multithreading
 - Basic JDBC
 
-HOW TO RUN
+## How to Run
 
-Open the project in VS Code and open the terminal.
+Open the project in **VS Code** and open the terminal.
 
-Compile the project:
+### Compile the Project
 
+```powershell
 Get-ChildItem -Recurse src -Filter *.java | ForEach-Object { $_.FullName } > sources.txt
 javac -d out @sources.txt
+```
 
-Run the application:
+### Run the Project
 
+```powershell
 java -cp out com.flight.flights.Main
+```
 
 On Windows, you can also run:
 
-.\run.bat
+```powershell
+.
+un.bat
+```
 
-MAIN MENU
+## Main Menu
 
+```text
 1. View All Flights
 2. Add New Flight
 3. Search Flights by Route
@@ -105,14 +125,15 @@ MAIN MENU
 7. Flight Statistics
 8. Show Live Clock
 9. Save and Exit
+```
 
-DATA STORAGE
+## Data Storage
 
-The main application uses a CSV file to store flight information. This makes the project simple to run without requiring a separate database setup.
+The main application uses a **CSV file** to store flight information. This makes the project simple to run without requiring a separate database setup.
 
-A basic JDBC class is also included to demonstrate how Java can be connected to a database.
+A basic JDBC class is also included to demonstrate database connectivity concepts.
 
-REQUIREMENTS
+## Requirements
 
 - JDK 8 or newer
 - VS Code or any Java IDE
@@ -120,6 +141,6 @@ REQUIREMENTS
 
 No GUI or MySQL setup is required to run the main application.
 
-PURPOSE
+## Purpose
 
-This project demonstrates how different Core Java concepts can be combined to create a practical Flight Scheduling Management System. 
+This project demonstrates how different **Core Java concepts** can be combined to create a practical Flight Scheduling Management System. It is kept simple enough to understand and explain easily during a **B.Tech practical or viva**.
